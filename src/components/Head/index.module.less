@@ -1,0 +1,40 @@
+.HeadWrapper {
+  margin-top: 44px;
+  color: #ffffff;
+  height: 130px;
+  :global {
+    .bg_log {
+      position: absolute;
+      top: 75px;
+      right: 0;
+      width: 174px;
+      height: 174px;
+      z-index: 0;
+    }
+    .title {
+      width: 144px;
+      height: 44px;
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 44px;
+    }
+    .info {
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 24px;
+      z-index: 1;
+      img {
+        width: 53px;
+        height: 53px;
+      }
+      .content {
+        margin-left: 13px;
+        b {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
