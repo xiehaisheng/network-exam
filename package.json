@@ -2,9 +2,9 @@
   "name": "frontend-base",
   "private": true,
   "scripts": {
-    "dev": "NODE_ENV=development npx webpack serve -- --env=local",
-    "build:test": "NODE_ENV=production npx webpack -- --env=test",
-    "build:prod": "NODE_ENV=production npx webpack -- --env=production"
+    "dev": "cross-env NODE_ENV=development npx webpack serve -- --env=local",
+    "build:test": "cross-env NODE_ENV=production npx webpack -- --env=test",
+    "build:prod": "cross-env NODE_ENV=production npx webpack -- --env=production"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx,less}": [
@@ -39,6 +39,7 @@
     "babel-plugin-import": "^1.13.5",
     "clean-webpack-plugin": "^4.0.0",
     "compression-webpack-plugin": "^10.0.0",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
     "husky": "^4.3.8",

@@ -10,15 +10,9 @@ export const Router = () => {
   const [pageStatus, setPageStatus] = useState<null | "404" | "error">(null);
   let PageComponent = useMemo(() => {
     let pagePath = location.pathname;
-    if (/^\/workbench/.test(pagePath)) {
-      document.title = "工作台";
-    }
-    if (/^\/personal/.test(pagePath)) {
-      document.title = "个人中心";
-    }
     if (pagePath === "/") {
-      history.push("/workbench");
-      pagePath = "/workbench";
+      history.push("/login");
+      pagePath = "/login";
     }
     setPageStatus(null);
 

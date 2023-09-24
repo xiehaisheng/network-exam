@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Form, Input, Modal, Slider } from "antd-mobile";
+import { Button, Form, Input, Modal, Popup, Slider } from "antd-mobile";
 import { TextOutline, LeftOutline } from "antd-mobile-icons";
 import { queryExamQuestions } from "@/service/exam";
 import styles from "./index.module.less";
@@ -46,7 +46,12 @@ export default function () {
           <div className="content-item-wrapper"></div>
         </div>
         <div className="exam-bottom">
-          <TextOutline fontSize={28} />
+          <TextOutline
+            fontSize={28}
+            onClick={() => {
+              setVisible(true);
+            }}
+          />
           <Button
             color="primary"
             shape="rounded"
@@ -65,14 +70,15 @@ export default function () {
           </Button>
         </div>
       </div>
-      <Modal
+      <Popup
         visible={visible}
-        content={<></>}
-        closeOnAction
-        onClose={() => {
+        onMaskClick={() => {
           setVisible(false);
         }}
-      />
+        bodyStyle={{ minHeight: "60vh" }}
+      >
+        Hello
+      </Popup>
     </>
   );
 }
