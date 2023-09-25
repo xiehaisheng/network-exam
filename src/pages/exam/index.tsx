@@ -100,10 +100,13 @@ export default function () {
             <div className="title">网络安全模拟考试</div>
             <div className="close-exam">放弃考试</div>
           </div>
-          <Slider value={current} max={total - 1} min={0} disabled />
-          <div>
-            {current + 1}/{total}
+          <div className="exam-active">
+            <div className="progress-number">
+              答题进度：{current + 1}/{total}
+            </div>
+            <div className="time">倒计时</div>
           </div>
+          <Slider value={current} max={total - 1} min={0} disabled />
         </div>
         <div className="center">
           <div className="option-title">

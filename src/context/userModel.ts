@@ -8,22 +8,22 @@ export const UserModelContext = createContext(() => {
     const history = useHistory();
     const [userInfo, setInfoData] = useState({});
 
-    const getUserInfo = async () => {
-        try {
-            const { data, code }: any = await queryUserInfo();
-            if (code === 1) {
-                setInfoData(data);
-            } else {
-                history.push('/login')
-            }
-        } catch (error) {
-            console.log(error);
-        }
-    };
+    // const getUserInfo = async () => {
+    //     try {
+    //         const { data, code }: any = await queryUserInfo();
+    //         if (code === 1) {
+    //             setInfoData(data);
+    //         } else {
+    //             history.push('/login')
+    //         }
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // };
 
-    useEffect(() => {
-        getUserInfo();
-    }, [getToken("token")]);
+    // useEffect(() => {
+    //     getUserInfo();
+    // }, [getToken("token")]);
 
     return {
         userInfo,

@@ -1,8 +1,36 @@
 .personalWrap {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  margin-top: 44px;
 
   :global {
+    .personal-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 44px;
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 44px;
+    }
+    .content {
+      .content-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+        padding: 20px 0;
+        border-bottom: 1px solid #f2f2f2;
+        color: #666666;
+        margin: 0 20px;
+      }
+      .content-btn {
+        text-align: center;
+        padding: 20px 0;
+        border-bottom: 1px solid #f2f2f2;
+        color: #666666;
+        margin: 0 20px;
+      }
+    }
   }
 }
