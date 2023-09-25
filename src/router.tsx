@@ -38,9 +38,7 @@ export const Router = () => {
   return (
     <React.Suspense fallback={<div>loading...</div>}>
       <IfElseControl
-        when={["/home", "/exam", "/login", "/personal"].includes(
-          location.pathname
-        )}
+        when={["/home", "/exam", "/login"].includes(location.pathname)}
         else={
           <LayoutBlank>
             <PageComponent></PageComponent>

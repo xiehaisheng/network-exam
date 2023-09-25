@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./index.module.less";
 import Head from "@/components/Head";
 import { Button, Form, Input, Modal } from "antd-mobile";
-import { login, userInfo } from "@/service/login";
+import { login, queryUserInfo } from "@/service/login";
 import { setToken } from "@/utils/config";
 import { useHistory } from "react-router-dom";
 
@@ -20,7 +20,7 @@ export default function () {
   };
 
   const isLogin = async () => {
-    const { code }: any = await userInfo();
+    const { code }: any = await queryUserInfo();
     if (code == -100) {
       setVisible(true);
       return;

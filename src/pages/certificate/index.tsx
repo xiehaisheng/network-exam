@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./index.module.less";
 import { queryUserInfo } from "@/service/login";
+
 import { LeftOutline } from "antd-mobile-icons";
 
 export default function () {
@@ -14,7 +15,7 @@ export default function () {
     const { data } = await queryUserInfo();
   };
   return (
-    <div className={styles.personalWrap}>
+    <div className={styles.certificateWrapper}>
       <LeftOutline
         onClick={() => {
           history.go(-1);

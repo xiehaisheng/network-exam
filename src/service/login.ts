@@ -4,7 +4,7 @@ export const login = (params: any) => {
     return request.post("/user/xy/login", params);
 };
 
-export const userInfo = () => {
+export const queryUserInfo = () => {
     return request.post("/user/xy/xy_info");
 };
 

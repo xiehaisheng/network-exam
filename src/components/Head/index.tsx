@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import styles from "./index.module.less";
-import { noLoginCount, userInfo } from "@/service/login";
+import { noLoginCount, queryUserInfo } from "@/service/login";
 import { getToken } from "@/utils/config";
 
 export default function (props: any) {
@@ -13,7 +13,7 @@ export default function (props: any) {
   };
 
   const getUserInfo = async () => {
-    const { data, code }: any = await userInfo();
+    const { data, code }: any = await queryUserInfo();
     if (code === 1) {
       setInfoData(data);
     } else {
